@@ -8,6 +8,7 @@ html, body {
 	height: 100%;
 }
 
+
 #floating-panel {
   position: absolute;
   top: 10px;
@@ -17,7 +18,8 @@ html, body {
   padding: 5px;
   border: 1px solid #999;
   text-align: center;
-  font-family: 'Roboto','sans-serif';
+  font-family: Roboto,'sans-serif';
   line-height: 30px;
   padding-left: 10px;
+  padding-bottom:10px;
 }
