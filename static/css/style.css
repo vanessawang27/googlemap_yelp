@@ -8,7 +8,7 @@ html, body {
   height: 100%;
 }
 
-#floating-panel {
+#floating-panel, #floating-panel-2 {
   position: absolute;
   margin-left:0px;
   top:10%;
@@ -22,6 +22,11 @@ html, body {
   padding-left: 10px;
 }
 
+#floating-panel-2{
+  top:37%;
+  left:1%;
+}
+
 #to, #from {
   font-family: sans-serif;
 }
@@ -33,10 +38,28 @@ html, body {
   margin-top:5px;
 }
 
-#collapse {
+#collapse, #collapse-2 {
   position: absolute;
   right:5%;
   top:5%;
   color:rgba(0,0,0,0.2);
   padding:5px;
 }
+
+#expand-btn, #expand-btn-2 {
+  color:rgba(0,0,0,0.3);
+  position: absolute;
+  margin-left:0px;
+  top:10%;
+  left:1%;
+  z-index: 5;
+  background-color: rgba(255,255,255, 0.9);
+  padding: 20px;
+  text-align: right;
+  line-height: 20px;
+}
+
+#expand-btn-2{
+  top:37%;
+}
+

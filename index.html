@@ -28,7 +28,27 @@
 	    </form>
 	</div>
 
-	<span id="expand" class="glyphicon glyphicon-chevron-right"></span>	
+	<div id="expand-btn">
+		<span id="expand" class="glyphicon glyphicon-chevron-right"></span>	
+	</div>
+
+	<div id="expand-btn-2">
+		<span id="expand-2" class="glyphicon glyphicon-chevron-right"></span>	
+	</div>
+
+
+<div id="floating-panel-2">
+    	<span id="collapse-2" class="glyphicon glyphicon-chevron-left"></span>
+	    <form id="calculate-route" name="calculate-route" action="#" method="get">
+
+	      <label for="find">Find:</label>
+	      <input type="text" id="to" name="to" required="required" placeholder="Search for places on the way" size="30" />
+	      <br/>
+
+	      <input id="btn-submit" type="submit" />
+	      <input id="btn-reset" type="reset" />
+	    </form>
+	</div>
 
 	<div id="map"></div>
 	<div id="error"></div>
@@ -39,7 +59,9 @@
   	<script type="text/javascript" src="js/yelp.js"></script>
 
   	<script>
- 	//$("#expand").hide();
+ 	$("#expand").hide();
+ 	$("#expand-2").hide();
+
   		$( "#collapse" ).click(function(event) {
   			event.preventDefault();
   			$("#floating-panel").hide("slow");
@@ -50,6 +72,18 @@
   			event.preventDefault();
   			$("#floating-panel").show("slow");
   			$("#expand").hide();
+  		});
+
+  		$( "#collapse-2" ).click(function(event) {
+  			event.preventDefault();
+  			$("#floating-panel-2").hide("slow");
+  			$("#expand-2").show("slow");
+		});
+
+  		$("#expand-2").click(function(event){
+  			event.preventDefault();
+  			$("#floating-panel-2").show("slow");
+  			$("#expand-2").hide();
   		});
 
   	</script>
