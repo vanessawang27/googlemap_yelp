@@ -11,6 +11,7 @@
   </head>
   <body>
     <div id="floating-panel">
+    	<span id="collapse" class="glyphicon glyphicon-chevron-left"></span>
 	    <form id="calculate-route" name="calculate-route" action="#" method="get">
 	      <label for="from">From:</label>
 	      <input type="text" id="from" name="from" required="required" placeholder="An address" size="30" />
@@ -22,10 +23,13 @@
 	      <a id="to-link" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
 	      <br/>
 
-	      <input id="btn" type="submit" />
-	      <input id="btn" type="reset" />
+	      <input id="btn-submit" type="submit" />
+	      <input id="btn-reset" type="reset" />
 	    </form>
 	</div>
+
+	<span id="expand" class="glyphicon glyphicon-chevron-right"></span>	
+
 	<div id="map"></div>
 	<div id="error"></div>
   </body>
@@ -34,4 +38,19 @@
   	<script type="text/javascript" src="js/map.js"></script>
   	<script type="text/javascript" src="js/yelp.js"></script>
 
+  	<script>
+ 	//$("#expand").hide();
+  		$( "#collapse" ).click(function(event) {
+  			event.preventDefault();
+  			$("#floating-panel").hide("slow");
+  			$("#expand").show("slow");
+		});
+
+  		$("#expand").click(function(event){
+  			event.preventDefault();
+  			$("#floating-panel").show("slow");
+  			$("#expand").hide();
+  		});
+
+  	</script>
 </html>
