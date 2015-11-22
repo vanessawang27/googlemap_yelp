@@ -4,9 +4,7 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var port = process.env.PORT || 3000;
 
-// Request API access: http://www.yelp.com/developers/getting_started/api_access
 var Yelp = require('yelp');
-
 var yelp = new Yelp({
   consumer_key: 'GBltAhcIGaWBiohWyXukyQ',
   consumer_secret: 'EZODy_uF2UCkd4uqCyOgrmNdmAY',

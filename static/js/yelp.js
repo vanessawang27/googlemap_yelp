@@ -1,5 +1,7 @@
+// Request API access: http://www.yelp.com/developers/getting_started/api_access
 
-// See http://www.yelp.com/developers/documentation/v2/search_api
+
+/* See http://www.yelp.com/developers/documentation/v2/search_api
 yelp.search({ term: 'food', location: 'Montreal' })
 .then(function (data) {
   console.log(data);
@@ -7,7 +9,7 @@ yelp.search({ term: 'food', location: 'Montreal' })
 .catch(function (err) {
   console.error(err);
 });
-
+*/
 // See http://www.yelp.com/developers/documentation/v2/business
 yelp.business('yelp-san-francisco')
   .then(console.log)

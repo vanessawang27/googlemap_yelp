@@ -1,4 +1,13 @@
-function calculateRoute(from, to) {
+        var mapObject;
+
+        function initMap() {
+            mapObject = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8
+            });
+        }
+        
+        function calculateRoute(from, to) {
         // Center initialized to Naples, Italy
         var myOptions = {
           zoom: 10,
@@ -6,7 +15,7 @@ function calculateRoute(from, to) {
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         // Draw the map
-        var mapObject = new google.maps.Map(document.getElementById("map"), myOptions);
+        mapObject = new google.maps.Map(document.getElementById("map"), myOptions);
 
         var directionsService = new google.maps.DirectionsService();
         var directionsRequest = {
@@ -32,7 +41,7 @@ function calculateRoute(from, to) {
         );
       }
 
-      $(document).ready(function() {
+$(document).ready(function() {
         // If the browser supports the Geolocation API
         if (typeof navigator.geolocation == "undefined") {
           $("#error").text("Your browser doesn't support the Geolocation API");
@@ -68,4 +77,4 @@ function calculateRoute(from, to) {
           event.preventDefault();
           calculateRoute($("#from").val(), $("#to").val());
         });
-      });
+});
