@@ -1,12 +1,3 @@
-// Request API access: http://www.yelp.com/developers/getting_started/api_access
-var Yelp = require('yelp');
-
-var yelp = new Yelp({
-  consumer_key: 'GBltAhcIGaWBiohWyXukyQ',
-  consumer_secret: 'EZODy_uF2UCkd4uqCyOgrmNdmAY',
-  token: 'nHaXfHn0xY8WWQpC8B26egU08xdBKUQW',
-  token_secret: 'dP8MHaybnx0YMBjpUBg8EkaSpgE',
-});
 
 // See http://www.yelp.com/developers/documentation/v2/search_api
 yelp.search({ term: 'food', location: 'Montreal' })
